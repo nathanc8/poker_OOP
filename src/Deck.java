@@ -6,6 +6,8 @@ public class Deck {
 
     public Deck(ArrayList<Card> cards) {
         this.cards = cards;
+        createDeck();
+//        shuffleDeck();
     }
 
     public static void displayDeck(ArrayList<Card> cards) {
@@ -15,8 +17,8 @@ public class Deck {
     }
 
     public void createDeck() {
-        for (Number number : Number.values()) {
-            for (Color color : Color.values()) {
+        for (Color color : Color.values()) {
+            for (Number number : Number.values()) {
                 Card card = new Card(color, number);
                 cards.add(card);
             }
@@ -28,8 +30,6 @@ public class Deck {
     }
 
     public ArrayList<Card> getCards() {
-        createDeck();
-        shuffleDeck();
         return cards;
     }
 }
