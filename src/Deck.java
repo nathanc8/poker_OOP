@@ -7,7 +7,7 @@ public class Deck {
     public Deck(ArrayList<Card> cards) {
         this.cards = cards;
         createDeck();
-//        shuffleDeck();
+        shuffleDeck();
     }
 
     public static void displayDeck(ArrayList<Card> cards) {
