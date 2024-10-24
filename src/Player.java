@@ -8,7 +8,6 @@ public class Player {
     public Player(String name, int id) {
         this.name = name;
         this.id = id;
-        Dealer.getPlayers().add(this); //permet d'injecter dynamiquement le joueur au sein de notre ArrayList de joueurs au sein de la classe Dealer
     }
 
     public String getName() {

@@ -7,8 +7,6 @@ public class Deck {
     //setter du deck : à l'instanciation de celui-ci, il sera créé & mélangé.
     public Deck(ArrayList<Card> cards) {
         this.cards = cards;
-        createDeck();
-        shuffleDeck();
     }
 
     //permet de visualiser le deck, et se sert notamment de la méthode toString() Override au sein de la classe Card
