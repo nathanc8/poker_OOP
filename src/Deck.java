@@ -16,6 +16,14 @@ public class Deck {
         }
     }
 
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
+
+    public int getDeckSize() {
+        return this.cards.size();
+    }
+
     public void createDeck() {
         for (Color color : Color.values()) {
             for (Number number : Number.values()) {
@@ -29,7 +37,11 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
-    public ArrayList<Card> getCards() {
-        return cards;
+    public Card drawFirstCard() {
+        if (cards.isEmpty()) {
+            throw new RuntimeException("Le deck est vide !");
+        } else {
+            return cards.removeFirst();
+        }
     }
 }
